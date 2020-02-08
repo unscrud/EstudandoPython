@@ -1,3 +1,6 @@
+# "Tenho em mim todos os sonhos do mundo."
+# Fernando Pessoa
+
 # primeiro arquivo criado com o unico objetivo
 # de fazer o velho print de olá mundo :)
 
