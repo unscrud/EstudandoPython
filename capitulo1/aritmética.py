@@ -1,4 +1,4 @@
-# Dizia eu que a aritimética
+# Dizia eu que a aritimética ...
 #                           "Professor Girafales"
 
 print("Assim como em outras linguagens podemos realizar operações aritiméticas simples:")
@@ -8,6 +8,10 @@ print(45 + 3.4)
 
 print("Subtração: 13.7 - 14 =")
 print(13.7 - 14)
+
+print("Também é possivel colocar o sinal do numero antes dele na operação:")
+print("Exemplo: +5 + -7 =")
+print(+5 + -7)
 
 print("Multiplicação: 2 * 1.5 =")
 print(2 * 1.5)
