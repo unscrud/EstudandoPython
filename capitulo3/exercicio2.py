@@ -1,10 +1,10 @@
-def do_twice(f):
-    f()  # executando o que for passado como parâmetro
-    f()
+def do_twice(funcao, valor):
+    funcao(valor)  # executando o que for passado como parâmetro
+    funcao(valor)
 
 
-def print_spam():
-    print('spam')
+def print_algo(algo):
+    print(algo)
 
 
-do_twice(print_spam)
+do_twice(print_algo, 'UnsCrud')
