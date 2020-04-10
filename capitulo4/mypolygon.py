@@ -1,13 +1,13 @@
 import turtle
+bob = turtle.Turtle()
 
 
 def square(t):
-    bob = turtle.Turtle()
     for i in range(4):
-        bob.fd(t)
-        bob.lt(90)
-    print(bob)
+        t.fd(150)
+        t.lt(90)
+    print(t)
     turtle.mainloop()
 
 
-square(300)
+square(bob)
