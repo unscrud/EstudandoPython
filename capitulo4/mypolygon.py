@@ -6,16 +6,16 @@ def square(t, length):
     for i in range(4):
         t.fd(length)
         t.lt(90)
-    print(t)
-    turtle.mainloop()
+
+
+square(bob, 200)
 
 
 def polygon(t, length, n):
+    angle = 360 / n
     for i in range(n):
         t.fd(length)
-        t.lt(360/n)
-    print(t)
-    turtle.mainloop()
+        t.lt(angle)
 
 
 def circle(t, r):
@@ -30,11 +30,9 @@ def arc(angle, t, r):
     for i in range(n):
         t.fd(length)
         t.lt(angle/n)
-    print(t)
-    turtle.mainloop()
 
 
-#square(bob, 200)
 #polygon(bob, 50, 7)
 #circle(bob, 50)
-arc(30, bob, 25)
+#arc(30, bob, 25)
+turtle.mainloop()
