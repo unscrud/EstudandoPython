@@ -1,3 +1,4 @@
+import math
 import turtle
 bob = turtle.Turtle()
 
@@ -18,23 +19,26 @@ def polygon(t, n, length):
         t.lt(angle)
 
 
-polygon(bob, n=7, length=70)
+#polygon(bob, n=7, length=70)
 
 
 def circle(t, r):
-    n = 100
-    length = (2*3.14*r)/n
-    polygon(t, length, n)
+    circumference = 2 * math.pi * r
+    n = int(circumference / 3) + 1
+    length = circumference / n
+    polygon(t, n, length)
+
+
+circle(bob, 50)
 
 
 def arc(angle, t, r):
     n = 100
-    length = (2*3.14*r)/n
+    length = (2*math.pi*r)/n
     for i in range(n):
         t.fd(length)
         t.lt(angle/n)
 
 
-#circle(bob, 50)
 #arc(30, bob, 25)
 turtle.mainloop()
