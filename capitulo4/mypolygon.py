@@ -14,31 +14,32 @@ def square(t, length):
 
 def polygon(t, n, length):
     angle = 360 / n
-    for i in range(n):
-        t.fd(length)
-        t.lt(angle)
+    polyline(t, n, length, angle)
 
 
 #polygon(bob, n=7, length=70)
 
 
 def circle(t, r):
-    circumference = 2 * math.pi * r
-    n = int(circumference / 3) + 1
-    length = circumference / n
-    polygon(t, n, length)
+    arc(t, r, 360)
 
 
-circle(bob, 50)
+#circle(bob, 50)
 
 
-def arc(angle, t, r):
-    n = 100
-    length = (2*math.pi*r)/n
+def arc(t, r, angle):
+    arc_length = 2 * math.pi * r * angle / 360
+    n = int(arc_length / 3) + 1
+    step_length = arc_length / n
+    step_angle = angle / n
+    polyline(t, n, step_length, step_angle)
+
+
+def polyline(t, n, length, angle):
     for i in range(n):
         t.fd(length)
-        t.lt(angle/n)
+        t.lt(angle)
 
 
-#arc(30, bob, 25)
+arc(bob, 25, 300)
 turtle.mainloop()
